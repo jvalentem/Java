@@ -1,0 +1,10 @@
+Instructions:
+1 - Open XAMPP and then activate the "MYSQL" option
+2 - Open the database script (integrasystem.sql) and run it (with xampp turned on)
+3 - Use and IDE (PREFERABLY NETBEANS) and run the project, the main class is "TCC"
+4 - after running the code, it will open a screen with 2 buttons that opens 2 different login screens, the credentials are in a .txt file (LOGINS.txt)
+Instruções:
+1 - Inicializar o MYSQL no xampp
+2 - Abrir o script do banco de dados (integrasystem.sql) e executa-lo (com o xampp ligado)
+3 - abrir alguma IDE (PREFERENCIALMENTE O NETBEANS) e executar o projeto, a classe principal é "Tcc"
+4 - Depois de executar o código, ira abrir 1 tela com 2 botões que abrem 2 telas de login diferentes, as credenciais estão em um documento .txt (LOGINS.txt)
