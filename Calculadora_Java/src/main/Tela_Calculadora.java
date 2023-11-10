@@ -50,6 +50,7 @@ public class Tela_Calculadora extends JFrame {
 	 * Create the frame.
 	 */
 	public Tela_Calculadora() {
+		setTitle("Calculadora Java");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 430, 292);
 		contentPane = new JPanel();
@@ -72,6 +73,11 @@ public class Tela_Calculadora extends JFrame {
 				input_n1.setText("");
 				input_n1.setFont(new Font("Arial", Font.PLAIN, 10));
 			}
+			public void focusLost(FocusEvent e) {
+				if(input_n1.getText().isEmpty()) {
+					input_n1.setText("primeiro valor");
+				}
+			}
 			
 		});
 		input_n1.setText("primeiro valor");
@@ -87,10 +93,15 @@ public class Tela_Calculadora extends JFrame {
 			public void focusGained(FocusEvent e) {
 				input_n2.setText("");
 			}
+			public void focusLost(FocusEvent e) {
+				if(input_n2.getText().isEmpty()) {
+					input_n2.setText("segundo valor");
+				}
+			}
 		});
 		input_n2.setText("segundo valor");
 		input_n2.setFont(new Font("Arial", Font.PLAIN, 9));
-		input_n2.setBounds(149, 104, 113, 24);
+		input_n2.setBounds(149, 109, 113, 24);
 		contentPane.add(input_n2);
 		input_n2.setColumns(10);
 		
@@ -110,7 +121,7 @@ public class Tela_Calculadora extends JFrame {
 			}
 		});
 		cb_operacao.setFont(new Font("Arial", Font.PLAIN, 10));
-		cb_operacao.setBounds(149, 44, 113, 21);
+		cb_operacao.setBounds(125, 44, 163, 21);
 		cb_operacao.addItem("Escolha uma operação");
 		cb_operacao.addItem(new Soma().getNome());
 		cb_operacao.addItem(new Subtracao().getNome());
@@ -170,14 +181,14 @@ public class Tela_Calculadora extends JFrame {
 			}
 		});
 		bt_calcular.setFont(new Font("Arial", Font.PLAIN, 10));
-		bt_calcular.setBounds(149, 146, 113, 21);
+		bt_calcular.setBounds(149, 151, 113, 21);
 		contentPane.add(bt_calcular);
 		
 		lbl_resultado = new JLabel("Resultado:");
 		lbl_resultado.setHorizontalAlignment(SwingConstants.CENTER);
 
-		lbl_resultado.setFont(new Font("Arial Black", Font.PLAIN, 12));
-		lbl_resultado.setBounds(0, 177, 416, 24);
+		lbl_resultado.setFont(new Font("Arial Black", Font.PLAIN, 10));
+		lbl_resultado.setBounds(0, 182, 416, 24);
 		contentPane.add(lbl_resultado);
 	}
 }
