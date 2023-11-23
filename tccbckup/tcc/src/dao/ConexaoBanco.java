@@ -39,14 +39,7 @@ public class ConexaoBanco {
                 //para o SQL Connection
                 this.conexao = DriverManager.getConnection(url, info);
 
-                if ( this.conexao != null) {
-                   
-                    return true;
-                }else
-                {
-                    
-                    return false;
-                }
+                return this.conexao != null;
         
          }
         catch(SQLException ex){
